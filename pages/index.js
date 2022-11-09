@@ -1,7 +1,11 @@
 import Head from 'next/head';
 import Image from 'next/image';
+import CommonButton from '../components/commonButton/CommonButton';
 import styles from '../styles/Home.module.css';
-
+import CloseIcon from '@mui/icons-material/Close';
+import CheckIcon from '@mui/icons-material/Check';
+import AddIcon from '@mui/icons-material/Add';
+import CameraAltIcon from '@mui/icons-material/CameraAlt';
 export default function Home() {
   return (
     <div className={styles.container}>
@@ -51,7 +55,19 @@ export default function Home() {
           </a>
         </div>
       </main>
-
+      <CommonButton variant='contained' color='secondary'>
+        Button
+      </CommonButton>
+      <CommonButton variant='contained' disabled startIcon={<CloseIcon />}>
+        close
+      </CommonButton>
+      <CommonButton
+        variant='contained'
+        color='success'
+        startIcon={<CameraAltIcon />}
+      >
+        camera
+      </CommonButton>
       <footer className={styles.footer}>
         <a
           href='https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app'
